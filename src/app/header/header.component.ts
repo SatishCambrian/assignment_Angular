@@ -14,13 +14,13 @@ export class HeaderComponent {
   /**
    * Event emitter for the text input in the header.
    */
+  // Output allows communication between child and parent components
   @Output() textEmitter = new EventEmitter<string>();
 
   /**
    * The text input in the header.
    */
   inputText: string = '';
-
   /**
    * Emits the text input in the header as an event.
    */
