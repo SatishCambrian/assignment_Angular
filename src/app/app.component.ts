@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'assignment';
+  /**
+    * Header title for the application.
+    */
+  headerTitle: string = 'Satish Awal';
+
+  /**
+   * Content text for the application.
+   */
+  contentText: string = '';
+
+  /**
+   * Event handler for when text is submitted.
+   */
+  onTextSubmitted(text: string) {
+    this.contentText = text;
+  }
 }

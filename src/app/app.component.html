@@ -1,5 +1,16 @@
+<!-- 
+  * This function is used to set the title of the header component
+  * @param {string} title - The title to be displayed in the header component
+  
+ onTextSubmitted(title: string) {
+   this.headerTitle = title;
+ } -->
 
-<app-header></app-header>
-<app-content></app-content>
+<app-header [title]="headerTitle" (textEmitter)="onTextSubmitted($event)"></app-header>
+<!-- Property binding  -->
+<div class="content">
+  <h2>Content Section</h2>
+  <p>{{ contentText }}</p>
+</div>
 <app-footer></app-footer>
 <router-outlet />

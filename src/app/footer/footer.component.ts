@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  creator ={
+    name:"Satish Awal",
+    country:"Nepal",
+    date:"2024"
+  }
+
 }

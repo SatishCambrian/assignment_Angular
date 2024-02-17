@@ -1,1 +1,43 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark bg-dark">
+  <div class="container">
+      <a class="navbar-brand" href="#home">{{title}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- ms-auto stands margin start-->
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#skill">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+
+      </div>
+  </div>
+</nav>
+
+<div>
+    <!-- This div element is used to display the input field and the submit button. -->
+    <h1>Two way binding</h1>
+    <!-- Event Binding -->
+    <!-- This input element is used to capture user input. It is two-way bound to the inputText variable, which is used to store the user input. -->
+    <input type="text" [(ngModel)]="inputText" placeholder="Type here...">
+    
+    <!-- Event Binding -->
+    <!-- This button element is used to submit the user input. It emits the inputText variable as an event using the emitText() method. -->
+    <button (click)="emitText()">Submit</button>
+</div>

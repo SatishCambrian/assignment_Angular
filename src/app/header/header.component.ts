@@ -1,10 +1,35 @@
-import { Component } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 
+/**
+ * Component for the header of the application.
+ */
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  /**
+   * The title to be displayed in the header.
+   * 
+   */
+  @Input() title: string = '';
 
+  /**
+   * Event emitter for the text input in the header.
+   */
+  @Output() textEmitter = new EventEmitter<string>();
+
+  /**
+   * The text input in the header.
+   */
+  inputText: string = '';
+
+  /**
+   * Emits the text input in the header as an event.
+   */
+  emitText() {
+    this.textEmitter.emit(this.inputText);
+    this.inputText = ''; // Clear input after emitting
+  }
 }
