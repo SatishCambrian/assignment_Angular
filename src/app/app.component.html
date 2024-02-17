@@ -1,13 +1,13 @@
-<!-- 
+    <!-- 
     onTextSubmitted(text: string) {
     this.contentText = text;} -->
-<!--Parent Component (AppComponent) passes data 
+    <!--Parent Component (AppComponent) passes data 
     to child component(Header Component) -->
 <app-header [title]="headerTitle" (textEmitter)="onTextSubmitted($event)"></app-header>
 <hr>
 <!-- Property binding  -->
 <div class="content">
-  <h2>Content Section</h2>
+  <h2>Content Section displays about the result from Property Binding</h2>
   <p>{{ contentText }}</p>
 </div>
 <hr>

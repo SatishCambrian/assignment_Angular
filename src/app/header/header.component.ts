@@ -9,10 +9,6 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  /**
-   * The title to be displayed in the header.
-   * 
-   */
   @Input() title: string = '';
 
   /**
