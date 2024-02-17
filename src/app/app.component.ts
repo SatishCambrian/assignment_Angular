@@ -9,6 +9,7 @@ export class AppComponent {
   /**
     * Header title for the application.
     */
+  //  One way binding 
   headerTitle: string = 'Satish Awal';
 
   /**
